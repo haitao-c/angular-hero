@@ -1,0 +1,13 @@
+<!--*ngIf: 当selectedHero为undefined时移除DOM(此处div) -->
+<div *ngIf="hero">
+  <h2>{{hero.name|uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <!-- [(ngModel)] 是Angular的双向绑定语法 -->
+      <input [(ngModel)]="hero.name" placaholder="name">
+    </label>
+  </div>
+</div>
+<button (click)="goBack()">go back</button>
+<button (click)="save()">save</button>
